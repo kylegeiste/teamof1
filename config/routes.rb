@@ -1,5 +1,7 @@
 Teamof1::Application.routes.draw do
 
+  get '/dashboard', to: 'dashboard#index'
+
   root :to => "sessions#new"
 
   resources :users

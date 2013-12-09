@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to the team, #{@user.first_name}!"
-      redirect_to @user
+      redirect_to "dashboard/#index"
   	else
       render 'new'
     end
