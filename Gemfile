@@ -40,6 +40,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'geocoder'
+
+gem 'gmaps4rails'
+
 ruby "2.0.0"
 
 # Use ActiveModel has_secure_password

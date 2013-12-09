@@ -1,0 +1,20 @@
+<% provide(:title, @user.display_name) %>
+<h1><%= gravatar_for @user %><%= @user.display_name %></h1>
+<div class="user-info div-centered"><h3>Profile information:</h3>
+
+<%= form_for @user do |f| %>
+     <%= f.label :first_name, "First Name" %>
+     <%= f.text_field :first_name %>
+     <%= f.label :last_name, "Last Name" %>
+     <%= f.text_field :last_name %>
+     <%= f.label :email, "Email Address" %>
+     <%= f.text_field :email %>
+     <%= f.label :location, "Location" %>
+     <%= f.text_field :location %>
+     <%= f.label :twitter_handle, "Twitter Handle" %>
+     <%= f.text_field :twitter_handle %>
+     <center><%= f.submit "Update your profile", class: "btn btn-large btn-primary" %></center>
+<% end %>
+
+
+</div>
