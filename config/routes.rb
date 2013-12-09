@@ -2,13 +2,7 @@ Teamof1::Application.routes.draw do
 
   get '/dashboard', to: 'dashboard#index'
 
-  
-
-    if current_user.present? do
-        root :to => "dashboard#index"
-    else
-      root :to => "sessions#new"
-    end
+  root :to => "sessions#new"
 
   
 
