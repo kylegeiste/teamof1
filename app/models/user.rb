@@ -12,6 +12,8 @@ before_create :create_remember_token
 geocoded_by :location
 after_validation :geocode
 
+has_many :posts
+has_many :comments
 has_secure_password #This adds a ton of things to the app, in one line. Most notably, it adds all pass confirmation steps.
 end
  

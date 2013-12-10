@@ -1,0 +1,19 @@
+<h1>Edit a post:</h1>
+
+<div class="span6 div-centered">
+<%= form_for :post, url: post_path(@post), method: :patch do |f| %>
+<%= render 'shared/post_error_messages' %> 
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :url, "URL of the asset you'd like feedback on"%>
+    <%= f.text_field :url %>
+ 
+    <%= f.label :text %>
+    <%= f.text_area :text %>
+
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+</div>

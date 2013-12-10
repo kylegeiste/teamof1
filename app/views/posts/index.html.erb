@@ -1,0 +1,18 @@
+<h1>Team Forum</h1>
+
+<div style="width: 75%" class="post-listing div-centered"> 
+<table style="width: 100%" class>
+  <tr>
+    <th>Title</th>
+    <th>Posted By</th>
+    <th>Replies</th>
+  </tr>
+  <% @posts.each do |post| %>
+    <tr style="border-bottom: 1px solid #EEE;">
+      <td><%= link_to "#{post.title}", post %></td>
+      <td style="text-align: center;">Author</td>
+      <td style="text-align: center;">XX</td>
+    </tr>
+  <% end %>
+</table>
+</div>
