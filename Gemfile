@@ -25,7 +25,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 
 gem 'bcrypt-ruby'
 
@@ -42,7 +42,7 @@ end
 
 gem 'geocoder'
 
-gem 'gmaps4rails'
+gem 'gmaps4rails', '~> 2.1.1'
 
 ruby "2.0.0"
 
