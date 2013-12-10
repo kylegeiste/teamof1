@@ -1,4 +1,6 @@
 @import "bootstrap";
+@import "bootstrap-responsive";
+
 
 /* mixins, variables, etc. */
 
@@ -89,6 +91,7 @@ p {
   text-decoration: none;
 }
 
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -155,3 +158,4 @@ footer ul li {
   margin-top: 45px;
   @include box_sizing;
 }
+
