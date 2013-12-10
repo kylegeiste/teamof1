@@ -11,7 +11,7 @@
     <tr style="border-bottom: 1px solid #EEE;">
       <td><%= link_to "#{post.title}", post %></td>
       <td style="text-align: center;">Author</td>
-      <td style="text-align: center;">XX</td>
+      <td style="text-align: center;"><%= post.comments.count %></td>
     </tr>
   <% end %>
 </table>
