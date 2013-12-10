@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 private
 	#strong parameters, to prevent misuse
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :display_name, :email, :password,
+      params.require(:user).permit(:first_name, :last_name, :display_name, :email, :location, :password,
                                    :password_confirmation)
     end
 end
