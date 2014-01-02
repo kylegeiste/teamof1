@@ -19,12 +19,16 @@ class UsersController < ApplicationController
   end
 
 	def index
+    #Put a comment here if this method is meant to be empty
 	end
 
-private
+  private #Fixed Indentation
 	#strong parameters, to prevent misuse
     def user_params
       params.require(:user).permit(:first_name, :last_name, :display_name, :email, :location, :password,
                                    :password_confirmation)
+
+    #Consider the following syntax so you don't have to put the colon in front of all of those symbol names
+    # *( %i(first_name last_name display_name email location password password confirmation) )
     end
 end
