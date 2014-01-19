@@ -1,4 +1,6 @@
 <div style="width: 75%" class="post-listing div-centered"> 
+	<h1>User List</h1>
+	<h2>Note: Admin access only!</h2><br/>
 <table style="width: 100%">
   <tr>
     <th>ID</th>
@@ -13,11 +15,15 @@
       <td style="text-align: center;"><%= user.first_name %></td>
       <td style="text-align: center;"><%= user.last_name %></td>
       <td style="text-align: center;"><%= user.email %></td>
-      <% if user.admin? %>
-      	<td style="text-align: center; color: green"><%= user.admin %></td>
-      <% else %>
-      	<td style="text-align: center; color: red"><%= user.admin %></td>
-    	<% end %>
+      <td style="text-align: center;"><%= user.location %></td>
+		
+		<!— This section displays the Admin status in green or red, for visibility. —>
+
+		<% if user.admin? %>
+			<td style="text-align: center; color: green"><%= user.admin %></td>
+		<% else %>
+	      	<td style="text-align: center; color: red"><%= user.admin %></td>
+		<% end %>
 
     </tr>
   <% end %>
