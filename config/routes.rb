@@ -4,8 +4,6 @@ Teamof1::Application.routes.draw do
 
   root :to => "sessions#new"
 
-  
-
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts do

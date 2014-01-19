@@ -6,12 +6,9 @@ end
 
 def create
   @post = Post.new(post_params)
- 
-  if @post.save
-    redirect_to @post
-  else
-    render 'new'
-  end
+  @post.update_attribute(:poster, current_user.display_name)
+  @post.update_attribute(:user_id, current_user.id)
+  redirect_to @post
 end
 
 def show
@@ -19,7 +16,7 @@ def show
 end
 
 def edit
-  	@post = Post.find(params[:id])
+  @post = Post.find(params[:id])
 end
 
 def update

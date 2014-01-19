@@ -2,8 +2,11 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
+    
     @comment = @post.comments.create(params[:comment].permit(:commenter, :body))
-    @comment.commenter = current_user
+    #@comment.commenter = current_user.display_name
+
+    @comment.update_attribute(:commenter, current_user.display_name)
     redirect_to post_path(@post)
   end
 
