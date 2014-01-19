@@ -1,0 +1,25 @@
+<div style="width: 75%" class="post-listing div-centered"> 
+<table style="width: 100%">
+  <tr>
+    <th>ID</th>
+    <th>First</th>
+    <th>Last</th>
+    <th>Email Address</th>
+    <th>Admin?</th>
+  </tr>
+  <% @users_sorted.each do |user| %>
+    <tr style="border-bottom: 1px solid #EEE;">
+      <td style="text-align: center;"><%= user.id %></td>
+      <td style="text-align: center;"><%= user.first_name %></td>
+      <td style="text-align: center;"><%= user.last_name %></td>
+      <td style="text-align: center;"><%= user.email %></td>
+      <% if user.admin? %>
+      	<td style="text-align: center; color: green"><%= user.admin %></td>
+      <% else %>
+      	<td style="text-align: center; color: red"><%= user.admin %></td>
+    	<% end %>
+
+    </tr>
+  <% end %>
+</table>
+</div>

@@ -19,6 +19,8 @@ class UsersController < ApplicationController
   end
 
 	def index
+    @users = User.all
+    @users_sorted = @users.sort_by{|user| user.id}
 	end
 
 private
